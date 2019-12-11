@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container container-line">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec2 }}"></ec-canvas>
+</view>
+
+<view class="container container-line">
+  <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ ec }}">hbh</ec-canvas>
+</view>
+
+
