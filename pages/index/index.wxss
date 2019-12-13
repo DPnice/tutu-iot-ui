@@ -33,3 +33,18 @@
 .chart-without-img button {
   text-align: left;
 }
+
+.notice-wrap{position: relative;background:rgb(36, 126, 187);padding:10rpx 10rpx 10rpx 0;height:50rpx;}
+.ovh{overflow:hidden}
+.font28{font-size:28rpx}
+.relative{position:relative}
+.notice{color:#fff;width:100%;height:40rpx;}
+.marquee_text {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+}
+.close-icon{position:absolute;right:15rpx;top:114rpx;}
+.icon40{width:40rpx;height:40rpx;}   
+.right{float:right}
+.icon{display:inline-block;width:32rpx;height:32rpx;background-size:contain;}

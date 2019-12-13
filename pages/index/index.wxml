@@ -1,4 +1,12 @@
 <!--index.wxml-->
+<view class='notice-wrap' hidden='{{hideNotice}}'>
+  <view class='notice ovh font28 relative'>
+    <view class="marquee_text" style="left:{{marqueeDistance}}px;">
+      {{notice}}
+    </view>
+  </view>
+</view>
+
 <view class="panel">
   <view class="chart-with-img" wx:for="{{charts}}" wx:for-item="chart" wx:key="{{chart.id}}">
     <image src="../../img/icons/{{chart.id}}.png" mode="aspectFit" bindtap="open" data-chart="{{chart}}"></image>
@@ -8,3 +16,4 @@
     <button bindtap="open" data-chart="{{chart}}">{{chart.name}}</button>
   </view>
 </view>
+
