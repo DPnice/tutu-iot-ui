@@ -13,23 +13,20 @@ Page({
   data: {
     charts: [{
       id: 'bar',
-      name: '柱状图'
-    }, {
-      id: 'pie',
-      name: '饼图'
+      name: '🐰以🍚🥗为天'
     }, {
       id: 'line',
-      name: '折线图(湿度温度)'
+      name: '🏡🌡❄💧🔥☔'
     }, {
       id: 'gauge',
-      name: '仪表盘(水量)'
+      name: '🥛🍺是🐰命之源'
     }],
 
     hideNotice: false,
     notice: '🔊暂无公告📄',
     marqueePace: 1, //滚动速度
     marqueeDistance: 10, //初始滚动距离
-    size: 12,
+    size: 30,
     interval: 20, // 时间间隔
     countTime: ''
   },
@@ -45,7 +42,7 @@ Page({
 
   shuffleSuc: function(data) {
     this.setData({
-      notice: "🔊" + data
+      notice: "🔊" + data.data
     })
   },
   fail: function() {

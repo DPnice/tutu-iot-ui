@@ -3,14 +3,13 @@
     "pages/index/index",
     "pages/line/index",
     "pages/gauge/index",
-    "pages/pie/index",
     "pages/bar/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#23bda3",
+    "navigationBarTitleText": "🐰🐰好吃吗？",
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

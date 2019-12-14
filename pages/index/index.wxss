@@ -34,7 +34,7 @@
   text-align: left;
 }
 
-.notice-wrap{position: relative;background:rgb(36, 126, 187);padding:10rpx 10rpx 10rpx 0;height:50rpx;}
+.notice-wrap{position: relative;background:rgb(35,189,163);padding:10rpx 10rpx 10rpx 0;height:50rpx;}
 .ovh{overflow:hidden}
 .font28{font-size:28rpx}
 .relative{position:relative}

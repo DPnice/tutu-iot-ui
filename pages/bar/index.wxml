@@ -3,3 +3,6 @@
   <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
 </view>
 
+<view class="container container-line">
+  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ecPie }}" bind:init="echartInitPie"></ec-canvas>
+</view>
