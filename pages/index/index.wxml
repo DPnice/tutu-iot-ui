@@ -17,3 +17,28 @@
   </view>
 </view>
 
+
+<view class='weui-cell-third'>
+  <view class="page__title">
+    <view>
+      互动直播喂食到 www.dpnice.online/live
+    </view>
+    <view>
+      告警
+    </view>
+  </view>
+  <view class="wecentBor">
+    <block wx:for="{{axis}}" wx:key="*this">
+      <view class='weui-cell-list'>
+        <view class='weui-cell-line'>
+          <view class='weui-cell-circle'>
+          <view></view>
+          </view>
+          <view class='weui-cell-time floarLeft'>{{item.time}}</view>
+          <view class='weui-cell-time floarLeft'>{{item.type}}</view>
+          <view class='weui-cell-event floarLeft'>{{item.event}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

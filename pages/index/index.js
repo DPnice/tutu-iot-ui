@@ -2,6 +2,7 @@ const app = getApp();
 var call = require("../../utils/request.js")
 
 Page({
+  
   onShareAppMessage: function(res) {
     return {
       title: 'ECharts 可以在微信小程序中使用啦！',
@@ -11,6 +12,28 @@ Page({
     }
   },
   data: {
+    axis: [
+      {
+        time: '2018-2-15',
+        type: '水量',
+        event: '告警23333333'
+      },
+      {
+        time: '2018-2-15',
+        type: '温度🌡',
+        event: '告警23333333'
+      },
+      {
+        time: '2018-2-15',
+        type: '湿度',
+        event: '告警23333333'
+      },
+      {
+        time: '2018-2-15',
+        type: '湿度',
+        event: '告警23333333'
+      },
+    ],
     charts: [{
       id: 'bar',
       name: '🐰以🍚🥗为天'
