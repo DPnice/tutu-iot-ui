@@ -184,3 +184,54 @@ page {
 .weui-cell-list:last-child .weui-cell-line {
   border: 0;
 }
+
+/* 输入框 */
+
+.component {
+  background-color: #fff;
+  width: 750rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.inputbox {
+  box-sizing: border-box;
+  margin-left: 20rpx;
+  border: 1px solid #ccc;
+  width: 75%;
+  border-radius: 16rpx;
+  height: 70rpx;
+  background: rgba(248, 248, 248, 1);
+}
+
+.image {
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 0rpx;
+  margin-left: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.input {
+  vertical-align: middle;
+  width: 80%;
+  /* margin-left: 10px; */
+  display: inline-block;
+  height: 60rpx;
+  margin-top: 5rpx;
+  font-size: 26rpx;
+}
+
+.button {
+  vertical-align: middle;
+  /* width: 100rpx; */
+  margin-left: 5px;
+  display: inline-block;
+  height: 65rpx;
+  margin-top: 5rpx;
+  font-size: 26pt;
+  top: -69rpx;
+  left: 590rpx;
+  position: relative;
+}

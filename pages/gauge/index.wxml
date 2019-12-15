@@ -6,5 +6,3 @@
 <view class="container container-line">
   <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ ec }}">hbh</ec-canvas>
 </view>
-
-

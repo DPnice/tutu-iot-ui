@@ -17,11 +17,19 @@
   </view>
 </view>
 
+<view class='component'>
+  <view class='inputbox'>
+    <view  class='image'>🥕</view>
+    <input placeholder="输入key喂食" class='input' type='{{type}}' value='{{value}}' confirm-type='喂食'/>
+    <!-- <icon  wx:if='{{value}}' bindtap="clearValue" class="icon" type='clear' size="16"></icon> -->
+  </view>
+  <button style='font-size: 10pt !important;' class="button" type="primary" size="mini" loading="{{loading}}" bindtap="feed">喂食🥗</button>
+</view>
 
 <view class='weui-cell-third'>
   <view class="page__title">
     <view>
-      互动直播喂食到 www.dpnice.online/live
+      互动直播喂食--制作喂食机中😐
     </view>
     <view>
       告警

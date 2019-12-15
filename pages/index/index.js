@@ -22,10 +22,10 @@ Page({
     }, {
       id: 'gauge',
       name: '🥛🍺是🐰命之源'
-      }, {
-        id: 'pie',
-        name: 'test'
-      }],
+    }, {
+      id: 'pie',
+      name: 'test'
+    }],
 
     hideNotice: false,
     notice: '',
@@ -33,7 +33,8 @@ Page({
     marqueeDistance: 10, //初始滚动距离
     size: 30,
     interval: 20, // 时间间隔
-    countTime: ''
+    countTime: '',
+    loading: false,
   },
 
   onReady() {},
@@ -59,7 +60,7 @@ Page({
 
   onLoad: function() {
     //在页面加载的时候执行方法
-    let that = this;   
+    let that = this;
     call.getRequest('alarm/list',
       function(data) {
         console.info(data)
@@ -109,5 +110,12 @@ Page({
       }
     }, that.data.interval);
   },
+
+  feed: function(e) {
+    //喂食接口
+    this.setData({
+        loading: true,
+      })
+  }
 
 });

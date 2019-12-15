@@ -46,7 +46,7 @@ function initChart(canvas, width, height) {
 }
 
 function initChart2(canvas, width, height) {
-
+ 
   const chart = echarts.init(canvas, null, {
     width: width,
     height: height
@@ -134,11 +134,15 @@ Page({
   },
   data: {
     ec: {
+      
       onInit: initChart
     },
     ec2: {
       onInit: initChart2
     }
+  },
+  a:function(){
+    console.info("ssssss")
   },
 
   onReady() {
