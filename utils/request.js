@@ -1,7 +1,6 @@
 var app = getApp();
-//项目URL相同部分，减轻代码量，同时方便项目迁移
-//这里因为我是本地调试，所以host不规范，实际上应该是你备案的域名信息
-var host = 'http://localhost:7777/iot/';
+//域名
+var host = 'http://192.168.0.102:7777/iot/';
 
 /**
  * POST请求，

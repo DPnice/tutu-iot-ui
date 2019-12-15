@@ -28,15 +28,18 @@
     </view>
   </view>
   <view class="wecentBor">
-    <block wx:for="{{axis}}" wx:key="*this">
+    <block wx:for="{{alarm}}" >
       <view class='weui-cell-list'>
         <view class='weui-cell-line'>
           <view class='weui-cell-circle'>
-          <view></view>
+            <view></view>
           </view>
-          <view class='weui-cell-time floarLeft'>{{item.time}}</view>
-          <view class='weui-cell-time floarLeft'>{{item.type}}</view>
-          <view class='weui-cell-event floarLeft'>{{item.event}}</view>
+          <view class='weui-cell-time floarLeft'>{{item.alarmTime}}</view>
+          <view class='weui-cell-type' wx:if="{{item.type == '温度'}}">🌡温度</view>
+          <view class='weui-cell-type' wx:elif="{{item.type == '湿度'}}">☔湿度</view>
+          <view class='weui-cell-type' wx:elif="{{item.type == '水量'}}">🌊水量</view>
+          <view class='weui-cell-type' wx:else="{{item.type == ''}}">📌</view>
+          <view class='weui-cell-event floarLeft'>{{item.alarm}}</view>
         </view>
       </view>
     </block>

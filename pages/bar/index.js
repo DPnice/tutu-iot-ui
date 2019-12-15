@@ -12,6 +12,12 @@ function initChart(canvas, width, height) {
 
   var option = {
     color: ['#37a2da', '#32c5e9', '#67e0e3'],
+    label: {
+      normal: {
+        fontSize: 14,
+        rich: {}
+      }
+    },
     tooltip: {
       trigger: 'axis',
       axisPointer: { // 坐标轴指示器，坐标轴触发有效
@@ -37,6 +43,7 @@ function initChart(canvas, width, height) {
         }
       },
       axisLabel: {
+        fontSize: '14',
         color: '#666'
       }
     }],
@@ -48,12 +55,15 @@ function initChart(canvas, width, height) {
       data: ['00:00-04:00', '04:00-08:00', '08:00-12:00', '12:00-16:00', '16:00-20:00', '20:00-00:00'],
       axisLine: {
         lineStyle: {
+          fontSize: '14',
           color: '#999'
         }
       },
       axisLabel: {
+        fontSize: 14,
         color: '#666'
       }
+     
     }],
     series: [{
       name: '喂食次数',
@@ -99,20 +109,23 @@ function initChartPie(canvas, width, height) {
       radius: [0, '60%'],
       data: [{
         value: 55,
-        name: '北京'
+        name: '00:00-04:00'
       }, {
         value: 20,
-        name: '武汉'
+        name: '04:00-08:00'
       }, {
         value: 10,
-        name: '杭州'
+        name: '08:00-12:00'
       }, {
         value: 20,
-        name: '广州'
+        name: '12:00-16:00'
       }, {
         value: 38,
-        name: '上海'
-      }, ],
+        name: '16:00-20:00'
+      }, {
+        value: 38,
+        name: '20:00-00:00'
+      }],
       itemStyle: {
         emphasis: {
           shadowBlur: 10,

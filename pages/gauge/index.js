@@ -78,7 +78,7 @@ function initChart2(canvas, width, height) {
       trigger: 'axis'
     },
     xAxis: {
-      name: "时间",
+      // name: "时间",
       nameTextStyle: {
         fontSize: 14
       },

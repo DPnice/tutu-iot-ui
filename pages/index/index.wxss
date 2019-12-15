@@ -129,7 +129,6 @@ page {
 
 .weui-cell-line {
   margin-left: 5px;
-  float: left;
   border-left: 1px solid #2fb69d;
   min-height: 100rpx;
   margin-bottom: -10px;
@@ -167,7 +166,12 @@ page {
   float: left;
   font-size: 14px;
   padding-left: 15px;
-  width: 200rpx;
+}
+
+.weui-cell-type {
+  float: right;
+  font-size: 14px;
+  /* padding-left: 15px; */
 }
 
 .weui-cell-event {

@@ -2,38 +2,17 @@ const app = getApp();
 var call = require("../../utils/request.js")
 
 Page({
-  
+
   onShareAppMessage: function(res) {
     return {
-      title: 'ECharts 可以在微信小程序中使用啦！',
+      title: '🐰兔子养好，然后红烧🍖🥘🍻',
       path: '/pages/index/index',
       success: function() {},
       fail: function() {}
     }
   },
   data: {
-    axis: [
-      {
-        time: '2018-2-15',
-        type: '水量',
-        event: '告警23333333'
-      },
-      {
-        time: '2018-2-15',
-        type: '温度🌡',
-        event: '告警23333333'
-      },
-      {
-        time: '2018-2-15',
-        type: '湿度',
-        event: '告警23333333'
-      },
-      {
-        time: '2018-2-15',
-        type: '湿度',
-        event: '告警23333333'
-      },
-    ],
+    alarm: [],
     charts: [{
       id: 'bar',
       name: '🐰以🍚🥗为天'
@@ -43,10 +22,13 @@ Page({
     }, {
       id: 'gauge',
       name: '🥛🍺是🐰命之源'
-    }],
+      }, {
+        id: 'pie',
+        name: 'test'
+      }],
 
     hideNotice: false,
-    notice: '🔊暂无公告📄',
+    notice: '',
     marqueePace: 1, //滚动速度
     marqueeDistance: 10, //初始滚动距离
     size: 30,
@@ -69,14 +51,37 @@ Page({
     })
   },
   fail: function() {
-    console.log("失败")
+    this.setData({
+        notice: '🔊暂无公告📄'
+      }),
+      console.log("公告失败")
   },
 
   onLoad: function() {
     //在页面加载的时候执行方法
+    let that = this;   
+    call.getRequest('alarm/list',
+      function(data) {
+        console.info(data)
+        that.setData({
+          alarm: data.data
+        })
+      },
+      function() {
+        that.setData({
+          alarm: [{
+            alarmTime: new Date().toLocaleTimeString(),
+            type: '',
+            alarm: '暂无告警'
+          }]
+        })
+        console.log("告警失败")
+      });
+
+    //公告
     call.getRequest('notice/msg', this.shuffleSuc, this.fail);
-    let data = {},
-      that = this;
+
+    let data = {};
     var length = that.data.notice.length * that.data.size; //文字长度
     var windowWidth = wx.getSystemInfoSync().windowWidth; // 屏幕宽度
     that.setData({

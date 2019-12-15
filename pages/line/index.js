@@ -33,8 +33,8 @@ function initChart(canvas, width, height) {
       trigger: 'axis'
     },
     xAxis: {
-      name: "时间",
-      nameTextStyle:{
+      // name: "时间",
+      nameTextStyle: {
         fontSize: 14
       },
       // type: 'time',
@@ -78,14 +78,14 @@ function initChart(canvas, width, height) {
       name: '湿度',
       type: 'line',
       smooth: true,
-        data: [12, 50, 51, 35, 70, 30, 20, 18, 36, 65, 30, 78, 40, 33],
-        label: {
-          normal: {
-            show: false,
-            position: 'top',
-            rich: {}
-          }
+      data: [12, 50, 51, 35, 70, 30, 20, 18, 36, 65, 30, 78, 40, 33],
+      label: {
+        normal: {
+          show: false,
+          position: 'top',
+          rich: {}
         }
+      }
     }]
   };
 
