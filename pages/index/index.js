@@ -12,6 +12,7 @@ Page({
     }
   },
   data: {
+    loadingHidden:false,
     alarm: [],
     charts: [{
       id: 'bar',
@@ -62,7 +63,8 @@ Page({
       function(data) {
         console.info(data)
         that.setData({
-          alarm: data.data
+          alarm: data.data,
+          loadingHidden: true
         })
       },
       function() {
@@ -71,7 +73,8 @@ Page({
             alarmTime: new Date().toLocaleTimeString(),
             type: '',
             alarm: '暂无告警'
-          }]
+          }],
+          loadingHidden: true
         })
         console.log("告警失败")
       });
@@ -114,5 +117,6 @@ Page({
         loading: true,
       })
   }
+
 
 });

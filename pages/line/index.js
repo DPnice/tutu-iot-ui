@@ -27,6 +27,7 @@ Page({
   },
   setTH: function() {
     //在页面加载的时候执行方法
+    wx.showLoading({ title: '加载中', icon: 'loading', duration: 10000 });
     let that = this;
     call.getRequest('humidity/list',
       function(data) {
@@ -63,6 +64,7 @@ Page({
         })
         //渲染
         that.initChart();
+        wx.hideLoading();
       },
       function() {
         wx.showToast({
