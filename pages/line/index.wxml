@@ -2,3 +2,12 @@
 <view class="container container-line">
   <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
 </view>
+
+<view >
+  <image style="width: 100px;height:150px;margin-left:130rpx;"  mode="aspectFit" src="../../img/png/t.png"></image>
+  <text class="text1">{{tNow}}℃</text>
+</view>
+<view >
+  <image style="width: 100px;height:150px;margin-left:130rpx;"  mode="aspectFit" src="../../img/png/h.png"></image>
+  <text class="text1">{{hNow}}%</text>
+</view>

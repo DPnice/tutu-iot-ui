@@ -14,8 +14,6 @@
    </view>
 
 
-
-
 <view class='notice-wrap' hidden='{{hideNotice}}'>
   <view class='notice ovh font28 relative'>
     <view class="marquee_text" style="left:{{marqueeDistance}}px;">

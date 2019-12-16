@@ -1,7 +1,7 @@
 var app = getApp();
 //域名
-// var host = 'http://192.168.0.102:7777/iot/';
-var host = 'http://192.168.1.81:7777/iot/';
+var host = 'http://192.168.0.102:7777/iot/';
+// var host = 'http://192.168.1.81:7777/iot/';
 // var host = 'https://www.dpnice.online:7777/iot/';
 
 /**

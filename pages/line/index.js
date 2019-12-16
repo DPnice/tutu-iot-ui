@@ -23,11 +23,17 @@ Page({
     // 温度
     temperature: [],
     //湿度
-    humidity: []
+    humidity: [],
+    tNow: "--",
+    hNow: "--"
   },
   setTH: function() {
     //在页面加载的时候执行方法
-    wx.showLoading({ title: '加载中', icon: 'loading', duration: 10000 });
+    wx.showLoading({
+      title: '转呀转',
+      icon: 'loading',
+      duration: 10000
+    });
     let that = this;
     call.getRequest('humidity/list',
       function(data) {
@@ -41,14 +47,14 @@ Page({
         }
         that.setData({
           time: timeList,
-          humidity: h
+          humidity: h,
+          hNow:h [h.length-1]
         })
-        
+
       },
       function() {
         that.setData({})
         console.log("暂无湿度数据")
-        
       });
 
     call.getRequest('temperature/list',
@@ -60,7 +66,8 @@ Page({
           t.push(resultData[index].temperature)
         }
         that.setData({
-          temperature: t
+          temperature: t,
+          tNow: t[t.length - 1]
         })
         //渲染
         that.initChart();
@@ -68,16 +75,15 @@ Page({
       },
       function() {
         wx.showToast({
-          title: "暂无数据",
+          title: "没有数据，难道是兔子啃电源了？",
           icon: 'none',
-          duration: 2000,
+          duration: 4000,
         });
         console.log("暂无温度数据")
       });
   },
 
   initChart: function() {
-    
     console.info(this.data.time)
     let echartsComponnet = this.selectComponent('#mychart-dom-line');
     echartsComponnet.init((canvas, width, height) => {
