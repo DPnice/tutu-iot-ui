@@ -22,9 +22,6 @@ Page({
     }, {
       id: 'gauge',
       name: '🥛🍺是🐰命之源'
-    }, {
-      id: 'pie',
-      name: 'test'
     }],
 
     hideNotice: false,

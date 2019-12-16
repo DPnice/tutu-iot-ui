@@ -3,10 +3,9 @@ var call = require("../../utils/request.js")
 const app = getApp();
 
 
-
 Page({
-  onLoad: function() {
-    this.initChart();
+  onReady: function() {
+    this.setTH();
   },
   onShareAppMessage: function(res) {
     return {
@@ -43,10 +42,12 @@ Page({
           time: timeList,
           humidity: h
         })
+        
       },
       function() {
         that.setData({})
         console.log("暂无湿度数据")
+        
       });
 
     call.getRequest('temperature/list',
@@ -60,16 +61,21 @@ Page({
         that.setData({
           temperature: t
         })
+        //渲染
+        that.initChart();
       },
       function() {
-        that.setData({})
+        wx.showToast({
+          title: "暂无数据",
+          icon: 'none',
+          duration: 2000,
+        });
         console.log("暂无温度数据")
       });
   },
 
   initChart: function() {
-    this.setTH();
-
+    
     console.info(this.data.time)
     let echartsComponnet = this.selectComponent('#mychart-dom-line');
     echartsComponnet.init((canvas, width, height) => {
@@ -170,6 +176,5 @@ Page({
       return chart;
     });
 
-  },
-  onReady() {}
+  }
 });

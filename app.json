@@ -3,8 +3,7 @@
     "pages/index/index",
     "pages/line/index",
     "pages/gauge/index",
-    "pages/bar/index",
-    "pages/pie/index"
+    "pages/bar/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,5 +12,8 @@
     "navigationBarTextStyle": "white"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 1000
+  }
 }
