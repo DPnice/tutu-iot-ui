@@ -51,6 +51,13 @@ Page({
         //渲染
         that.initChart();
         wx.hideLoading();
+        if (t.length == 0) {
+          wx.showToast({
+            title: "没有数据，难道是兔子啃电源了？",
+            icon: 'none',
+            duration: 4000,
+          });
+        }
       },
       function () {
         wx.showToast({
@@ -60,6 +67,7 @@ Page({
         });
         console.log("暂无温度数据")
       });
+
   },
   initChart:function() {
     var echartsComponnetGauge = this.selectComponent('#mychart-dom-gauge');
