@@ -6,7 +6,7 @@ const app = getApp();
 Page({
   onShareAppMessage: function (res) {
     return {
-      title: 'ECharts 可以在微信小程序中使用啦！',
+      title: '清蒸？焖炖？',
       path: '/pages/index/index',
       success: function () { },
       fail: function () { }

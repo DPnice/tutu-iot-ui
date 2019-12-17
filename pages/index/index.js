@@ -12,7 +12,7 @@ Page({
     }
   },
   data: {
-    loadingHidden:false,
+    loadingHidden: false,
     alarm: [],
     charts: [{
       id: 'bar',
@@ -33,8 +33,13 @@ Page({
     interval: 20, // 时间间隔
     countTime: '',
     loading: false,
+    jwt: ''
   },
-
+  jwtInput: function(key) {
+    this.setData({
+      jwt: key.detail.value
+    })
+  },
   onReady() {},
 
   open: function(e) {
@@ -112,11 +117,39 @@ Page({
   },
 
   feed: function(e) {
+    var that = this;
     //喂食接口
     this.setData({
-        loading: true,
-      })
+      loading: true
+    })
+    var data = {
+      jwt: that.data.jwt
+    }
+    console.info(data)
+    call.postRequest('feed', data,
+      function(redata) {
+        console.info(redata)
+        that.setData({
+          loading: false
+        })
+        wx.showToast({
+          title: "❤喂食成功❤",
+          duration: 4000,
+        });
+      },
+      function() {
+        that.setData({
+          loading: false
+        })
+        console.log("喂食失败")
+        wx.showToast({
+          title: "喂食失败😭",
+          icon: 'none',
+          image: '../../img/x.jpg',
+          duration: 4000,
+          mask: true
+        });
+      });
   }
-
 
 });

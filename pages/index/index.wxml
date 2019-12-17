@@ -35,10 +35,10 @@
 <view class='component'>
   <view class='inputbox'>
     <view  class='image'>🥕</view>
-    <input placeholder="输入key喂食" class='input' type='{{type}}' value='{{value}}' confirm-type='喂食'/>
+    <input maxlength="999" placeholder="输入兔粮授权码🗝" class='input' value='{{value}}' bindinput="jwtInput" confirm-type='喂食'/>
     <!-- <icon  wx:if='{{value}}' bindtap="clearValue" class="icon" type='clear' size="16"></icon> -->
   </view>
-  <button style='font-size: 10pt !important;' class="button" type="primary" size="mini" loading="{{loading}}" bindtap="feed">喂食🥗</button>
+  <button style='font-size: 10pt; !important;' class="button" type="primary" size="mini" loading="{{loading}}" bindtap="feed">喂食🥗</button>
 </view>
 
 <view class='weui-cell-third'>

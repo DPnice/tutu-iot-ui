@@ -4,5 +4,5 @@
 </view>
 
 <view class="container container-line">
-  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ecPie }}" bind:init="echartInitPie"></ec-canvas>
+  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ecPie }}" ></ec-canvas>
 </view>
