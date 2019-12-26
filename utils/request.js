@@ -1,8 +1,8 @@
 var app = getApp();
 //域名
-var host = 'http://localhost:7777/iot/';
+// var host = 'http://localhost:7777/iot/';
 // var host = 'http://192.168.1.81:7777/iot/';
-// var host = 'https://www.dpnice.online/iot/';
+var host = 'https://www.dpnice.online/iot/';
 
 /**
  * POST请求，

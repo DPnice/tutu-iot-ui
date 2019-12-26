@@ -98,6 +98,12 @@ Page({
       marqueeDistance: windowWidth
     });
     that.run1();
+   
+  },
+  delay: function(milSec) {
+    return new Promise(resolve => {
+      setTimeout(resolve, milSec)
+    })
   },
   run1: function() {
     var that = this;
@@ -134,7 +140,10 @@ Page({
         })
         wx.showToast({
           title: "❤喂食成功❤",
-          duration: 4000,
+          icon: 'none',
+          image: '../../img/爱心.png',
+          duration: 3000,
+          mask: true
         });
       },
       function() {
@@ -146,10 +155,11 @@ Page({
           title: "喂食失败😭",
           icon: 'none',
           image: '../../img/x.jpg',
-          duration: 4000,
+          duration: 3000,
           mask: true
         });
       });
-  }
+  },
+  
 
 });
